@@ -1,0 +1,62 @@
+:root {
+    --color-verde: #02B95E;
+    --color-azul: #0A2149;
+    --color-azul-claro: #143DDA;
+    --color-negro: #000000;
+    --color-blanco: #FFFFFF;
+    --color-rojo: #FE0000;
+    --color-amarillo: #FFCA00;
+
+    --color-azul-claro-transparente:#143cda4c;
+    --color-rojo-transparente: #fe00002e;
+
+
+    --font-vintagedeco: "Vintagedeco";
+
+}
+
+@font-face {
+    font-family: 'Vintagedeco';
+    /* Nombre con el que llamarás a la fuente más adelante */
+    src: url('/FrontendMundialS12026/estilos/VintageDeco-Bold.ttf') format('truetype');
+    /* Ruta de tu archivo */
+    font-weight: bold;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--font-vintagedeco);
+
+}
+
+
+.contenedor{
+    flex-direction: column;
+    
+}
+
+
+.fila .posicion,
+.fila .puntos{
+    text-align:center;
+    font-weight:bold;
+}
+
+.nombre{
+    position: relative;
+}
+
+
+.sube{
+    background: var(--color-azul-claro-transparente);
+}
+
+.baja{
+    background: var(--color-rojo-transparente);
+}

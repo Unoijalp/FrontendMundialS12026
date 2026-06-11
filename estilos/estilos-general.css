@@ -20,7 +20,7 @@
 @font-face {
     font-family: 'Vintagedeco';
     /* Nombre con el que llamarás a la fuente más adelante */
-    src: url('/FrontendMundialS12026/estilos/VintageDeco-Bold.ttf') format('truetype');
+    src: url('/MundialS12026/estilos/VintageDeco-Bold.ttf') format('truetype');
     /* Ruta de tu archivo */
     font-weight: bold;
     font-style: normal;

@@ -13,7 +13,7 @@
 
 
 /* Estilos para pantallas cuadradas*/
-@media (min-width: 1024px) {
+@media (min-width: 1025px) {
 
     .contenedor-intro {
         position: absolute;
@@ -58,7 +58,8 @@
     .marco-intro {
         position: absolute;
         z-index: 1;
-        height: 100vw;
+        height: 105vw;
+        width: 105vh;
         transform:
             rotate(90deg);
 
@@ -73,7 +74,8 @@
         position: absolute;
         top: 0;
         left: 0;
-        background-color: var(--color-verde);
+        background: var(--color-verde);
+        background: radial-gradient(circle,rgba(2, 185, 94, 1) 0%, rgba(2, 185, 94, 1) 30%, rgba(0, 94, 47, 1) 100%);
         width: 100vw;
         height: 100vh;
         display: flex;
@@ -90,21 +92,49 @@
         }
     }
 
-    .layout{
+    .layout {
         display: flex;
         flex-direction: row;
         height: 100vh;
     }
 
+    .col1 {
+        width: 30vw;
+        height: 100vh;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+        justify-items: center;
+    }
+
+    .col2 {
+        width: 70vw;
+        height: 100vh;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+        justify-items: center;
+    }
+
 
     .logo-fondo {
-        width: 20%;
+        display: none;
+    }
+
+    .logo-fondo-blanco {
+        display: flex;
+        width: 64%;
         object-fit: contain;
         /* z-index: -1; */
         opacity: 1;
-        margin-inline: 10%;
-        align-self: center;
-        justify-self: center;
+        margin-left: 53%;
+
+        /* Inicia fuera de la pantalla */
+        transform-style: preserve-3d;
+        /* transform-origin: 50% 50%; */
+
+        animation:
+            girar3D-logo-blanco ease-in-out 10s infinite;
     }
 
 
@@ -112,7 +142,7 @@
         position: absolute;
         height: 100%;
         top: 0;
-        left: 0;
+        left: -70px;
 
     }
 
@@ -121,22 +151,33 @@
     h1 {
         color: var(--color-amarillo);
         text-align: center;
-        margin-top: 4rem;
-        font-size: 3.5rem;
+        font-size: 3.8rem;
+        margin-top: 0;
+        animation:
+            sombra linear 10s infinite;
+        
     }
 
     #tablaranking {
-        width: 100%;
+        width: 70%;
         display: flex;
         flex-direction: column;
-        gap: 6px;
-        font-size: 1.4rem;
-        margin-inline: 2rem;
+        gap: 4px;
+        /* font-size: 1.4rem; */
+        margin-inline: 0rem;
 
     }
 
-    .titulo {
-        font-size: 0.6rem;
+
+    .borde-redondo {
+        border: 3px solid var(--color-blanco);
+        border-radius: 18px;
+        padding: 0.5rem;
+    }
+
+
+    /* .titulo {
+        font-size: 0.8rem;
         display: grid;
         grid-template-columns: 80px 1fr 80px;
         align-items: center;
@@ -149,20 +190,19 @@
         box-sizing: border-box;
 
         color: var(--color-blanco);
-    }
+    } */
 
 
     .titulo-tabla {
-        font-size: 0.8rem;
+        font-size: 1.1rem;
         text-align: center;
         font-weight: bold;
 
         display: grid;
-        grid-template-columns: 80px 1fr 80px;
+        grid-template-columns: 10% 65% 25%;
 
         align-items: center;
 
-        padding: 12px;
         border-radius: 8px;
 
         box-sizing: border-box;
@@ -176,12 +216,12 @@
 
     .fila {
         display: grid;
-        grid-template-columns: 80px 1fr 80px;
+        grid-template-columns: 10% 65% 25%;
 
         align-items: center;
 
         /* padding: 12px; */
-        border-radius: 8px;
+        border-radius: 20px;
 
 
 
@@ -194,19 +234,74 @@
     }
 
     .bandera {
-        height: 23px;
-        width: 23px;
+        height: 35px;
+        width: 35px;
         position: absolute;
-        top: 0.4rem;
-        left: 10px;
-        border-radius: 10px;
+        top: 0.8rem;
+        left: 38px;
+        border-radius: 15px;
         object-fit: cover;
-        border: 4px solid var(--color-blanco);
+        border: 5px solid var(--color-blanco);
         box-shadow: 3px 5px 16px var(--color-negro-transparente);
+        
+    }
 
+
+    .bandera{
+
+        filter:
+            drop-shadow(0 15px 20px rgba(0,0,0,.4));
+
+        transition:.4s;
+         perspective:1000px;
+
+
+
+
+    /* transform:
+        perspective(1200px)
+        rotateX(8deg)
+        rotateY(-8deg); */
+
+    filter:
+        drop-shadow(
+            0 8px 8px rgba(0,0,0,.2)
+        )
+        drop-shadow(
+            0 25px 25px rgba(0,0,0,.25)
+        );
 
     }
 
+    .bandera:hover{
+
+        transform:
+            translateY(-10px)
+            scale(1.05);
+
+        filter:
+            drop-shadow(0 30px 30px rgba(0,0,0,.5));
+    }
+
+
+    .posicion {
+
+        margin-right: 0.3rem;
+        font-size: 2.5rem;
+
+    }
+
+    .nombre {
+        margin-right: 0.2rem;
+        padding-left: 75px !important;
+        font-size: 2.5rem;
+
+    }
+
+    .puntos {
+        font-size: 2.5rem;
+
+    }
 
 
     /* Giro completo en Y  */
@@ -214,7 +309,7 @@
 
         0% {
             transform:
-                rotateY(0deg) scale(500%);
+                rotateY(0deg) scale(400%);
             translate: 0% 50%;
 
         }
@@ -239,7 +334,7 @@
 
         100% {
             transform:
-                rotateY(720deg) scale(500%);
+                rotateY(720deg) scale(400%);
             translate: 0% 50%;
         }
     }
@@ -290,6 +385,56 @@
         100% {
             opacity: 0%;
             display: none;
+        }
+    }
+
+
+
+
+
+
+        /* Giro completo en Y  */
+    @keyframes girar3D-logo-blanco {
+
+        0% {
+            transform:
+                rotateY(0deg) scale(120%);
+            translate: 0% 0%;
+
+        }
+
+        5% {
+            transform:
+                rotateY(360deg) scale(100%);
+
+        }
+
+        25% {
+            transform:
+                rotateY(360deg) scale(90%);
+
+        }
+
+
+        100% {
+            transform:
+                rotateY(360deg) scale(120%);
+        }
+    }
+
+
+    @keyframes sombra{
+        0%{
+            text-shadow: 0px 0px 0px rgba(0,0,0,0.75);
+
+        }
+
+        50%{
+            text-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+        }
+
+        100%{
+            text-shadow: 0px 0px 0px rgba(0,0,0,0.75);
         }
     }
 

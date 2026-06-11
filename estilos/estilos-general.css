@@ -44,27 +44,8 @@ body {
 }
 
 
-.borde-redondo{
-    border: 1px solid var(--color-blanco);
-    border-radius: 8px;
-    padding: 0.5rem;
-}
 
-.posicion{
-    
-    margin-right: 0.3rem;
-}
 
-.nombre{
-    margin-right: 0.3rem;
-    padding-left: 2.4rem;
-    font-size: 1.3rem;
-
-}
-
-.puntos{
-
-}
 
 .fila .posicion,
 .fila .puntos{

@@ -224,12 +224,22 @@ function actualizarTabla(animar = true) {
     if (animar) {
 
         Flip.from(state, {
-            duration: 1,
+            duration: 2,
             ease: "power4.out",
             stagger: 0.05,
             scale: true
 
         });
+
+        setTimeout(() => {
+            // limpiar estados
+            [...tablaranking.children].forEach(fila => {
+                fila.classList.remove("sube");
+                fila.classList.remove("baja");
+            });
+        }, 3000); 
+
+
 
     }
 }

@@ -43,7 +43,9 @@ body {
     
 }
 
-
+img{
+    user-select: none;
+}
 
 
 

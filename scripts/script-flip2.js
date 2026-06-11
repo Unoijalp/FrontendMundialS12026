@@ -155,7 +155,7 @@ function crearTabla() {
             <div class="borde-redondo posicion"></div>
             <div class="borde-redondo nombre">
                 <span>
-                    <img class="bandera" src="/FrontendMundialS12026/imagenes/${equipo.bandera}.webp">
+                    <img class="bandera" src="/MundialS12026/imagenes/${equipo.bandera}.webp">
                 </span>
                 ${equipo.nombre}
             </div>

@@ -128,6 +128,21 @@ function crearTabla() {
 
     tablaranking.innerHTML = "";
 
+    //Titulo    
+    const fila = document.createElement("div");
+
+    fila.classList.add("titulo-tabla");
+        fila.innerHTML = `
+            <div >Pos.</div>
+            <div >Selección</div>
+            <div>Puntos</div>
+        `;
+
+    tablaranking.appendChild(fila);
+
+
+
+
     equipos.forEach(equipo => {
 
         const fila = document.createElement("div");
@@ -137,14 +152,14 @@ function crearTabla() {
         fila.dataset.id = equipo.id;
 
         fila.innerHTML = `
-            <div class="posicion"></div>
-            <div class="nombre">
+            <div class="borde-redondo posicion"></div>
+            <div class="borde-redondo nombre">
                 <span>
                     <img class="bandera" src="/FrontendMundialS12026/imagenes/${equipo.bandera}.webp">
                 </span>
                 ${equipo.nombre}
             </div>
-            <div class="puntos"></div>
+            <div class="borde-redondo puntos"></div>
         `;
 
         tablaranking.appendChild(fila);

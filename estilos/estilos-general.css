@@ -7,7 +7,7 @@
     --color-rojo: #FE0000;
     --color-amarillo: #FFCA00;
 
-    --color-azul-claro-transparente:#143cda4c;
+    --color-azul-claro-transparente: #143cda4c;
     --color-rojo-transparente: #fe00002e;
     --color-negro-transparente: #000000;
 
@@ -38,32 +38,69 @@ body {
 }
 
 
-.contenedor{
+.contenedor {
     flex-direction: column;
-    
+
 }
 
-img{
+img {
     user-select: none;
 }
 
 
 
 .fila .posicion,
-.fila .puntos{
-    text-align:center;
-    font-weight:bold;
+.fila .puntos {
+    text-align: center;
+    font-weight: bold;
 }
 
-.nombre{
+.nombre {
     position: relative;
 }
 
 
-.sube{
+.sube {
     background: var(--color-azul-claro-transparente);
 }
 
-.baja{
+.baja {
     background: var(--color-rojo-transparente);
 }
+
+
+
+
+
+
+#newintro {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 9999;
+
+    background: black;
+
+    opacity: 100%;
+    transition:
+        opacity 2s ease;
+
+}
+
+#newintro.ocultar {
+    z-index: 9999;
+    pointer-events: none;
+    opacity: 0%;
+
+}
+
+#newintro video {
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+}
+
